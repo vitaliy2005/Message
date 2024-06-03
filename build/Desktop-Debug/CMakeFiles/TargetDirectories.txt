@@ -1,0 +1,9 @@
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/message.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/install.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/message_autogen_timestamp_deps.dir
+/home/warg/Work/qt/message/build/Desktop-Debug/CMakeFiles/message_autogen.dir
