@@ -11,6 +11,8 @@ TcpSocketsServer::TcpSocketsServer()
     {
         qDebug() << "error";
     }
+
+    threadPool = new QThreadPool;
 }
 
 
@@ -32,33 +34,35 @@ void TcpSocketsServer::incomingConnection(qintptr socketDescriptor)
 void TcpSocketsServer::slotReadyRead()
 {
     socket = reinterpret_cast<QTcpSocket*>(sender());
-    QDataStream in(socket);
-    in.setVersion(QDataStream::Qt_6_2);
-    if(in.status() == QDataStream::Ok)
-    {
-        qDebug() << "read";
-        QString message;
-        in >> message;
-        qDebug() << message;
-        sendToClient(message);
-    }
-    else
-    {
-        qDebug() << "error read";
-    }
+    qrunnable = new QRunnableThread(sockets, socket);
+    threadPool->start(qrunnable);
+    // QDataStream in(socket);
+    // in.setVersion(QDataStream::Qt_6_2);
+    // if(in.status() == QDataStream::Ok)
+    // {
+    //     qDebug() << "read";
+    //     QString message;
+    //     in >> message;
+    //     qDebug() << message;
+    //     sendToClient(message);
+    // }
+    // else
+    // {
+    //     qDebug() << "error read";
+    // }
 }
 
-void TcpSocketsServer::sendToClient(QString message)
-{
-    bArray.clear();
-    QDataStream out(&bArray, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_2);
-    out << message;
-    for (auto s : sockets)
-    {
-        s->write(bArray);
-    }
-}
+// void TcpSocketsServer::sendToClient(QString message)
+// {
+//     // bArray.clear();
+//     // QDataStream out(&bArray, QIODevice::WriteOnly);
+//     // out.setVersion(QDataStream::Qt_6_2);
+//     // out << message;
+//     // for (auto s : sockets)
+//     // {
+//     //     s->write(bArray);
+//     // }
+// }
 
 void TcpSocketsServer::deleteSockets()
 {

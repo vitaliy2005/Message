@@ -6,10 +6,12 @@ CONFIG += c++20
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qrunnablethread.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    qrunnablethread.h
 
 FORMS += \
     mainwindow.ui
