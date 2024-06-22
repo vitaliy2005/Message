@@ -1,5 +1,6 @@
 #include "mainwindow.h"
-#include <QtCore/qdebug.h>
+
+
 
 TcpSocketsServer::TcpSocketsServer()
 {
@@ -12,64 +13,61 @@ TcpSocketsServer::TcpSocketsServer()
         qDebug() << "error";
     }
 
-    threadPool = new QThreadPool;
+
 }
-
-
 void TcpSocketsServer::incomingConnection(qintptr socketDescriptor)
 {
-    socket = new QTcpSocket;
-    socket->setSocketDescriptor(socketDescriptor);
+    newSocket_interface = new MTcpSocket(socketDescriptor);
 
-
-    connect(socket, &QTcpSocket::readyRead, this, &TcpSocketsServer::slotReadyRead);
-    connect(socket, &QTcpSocket::disconnected, this, &TcpSocketsServer::deleteSockets);
-
-    sockets.push_back(socket);
+    newSockets_interface.push_back(newSocket_interface);
     socketDescriptors.push_back(socketDescriptor);
 
-    qDebug() << "Client connection " << socketDescriptor;
+
+    int threadIdx = m_availableThreads.size();
+
+    if (threadIdx < m_idealThreadCount)
+    {
+        m_availableThreads.append(new QThread());
+        m_threadsLoad.append(1);
+        m_availableThreads.last()->start();
+    }
+    else
+    {
+        threadIdx = std::distance(m_threadsLoad.cbegin(),std::min_element(m_threadsLoad.cbegin(), m_threadsLoad.cend()));
+        ++m_threadsLoad[threadIdx];
+    }
+    newSocket_interface->moveToThread(m_availableThreads.at(threadIdx));
+
+    connect(newSocket_interface, &MTcpSocket::socketClientDisconnected_signal, this, [this, threadIdx]() {--m_threadsLoad[threadIdx];}, Qt::QueuedConnection);
+    connect(newSocket_interface, &MTcpSocket::readyToSend_signal, this, &TcpSocketsServer::sendToSockets);
+
+    //addPendingConnection(newSocket_interface);
 }
 
-void TcpSocketsServer::slotReadyRead()
+
+
+void TcpSocketsServer::sendToSockets(QString message)
 {
-    socket = reinterpret_cast<QTcpSocket*>(sender());
-    qrunnable = new QRunnableThread(sockets, socket);
-    threadPool->start(qrunnable);
-    // QDataStream in(socket);
-    // in.setVersion(QDataStream::Qt_6_2);
-    // if(in.status() == QDataStream::Ok)
-    // {
-    //     qDebug() << "read";
-    //     QString message;
-    //     in >> message;
-    //     qDebug() << message;
-    //     sendToClient(message);
-    // }
-    // else
-    // {
-    //     qDebug() << "error read";
-    // }
+    bArray.clear();
+    QDataStream out(&bArray, QIODevice::WriteOnly);
+    out.setVersion(QDataStream::Qt_6_2);
+    out << message;
+    for (auto socket : newSockets_interface)
+    {
+        socket->writeInSoket(message);
+    }
 }
-
-// void TcpSocketsServer::sendToClient(QString message)
-// {
-//     // bArray.clear();
-//     // QDataStream out(&bArray, QIODevice::WriteOnly);
-//     // out.setVersion(QDataStream::Qt_6_2);
-//     // out << message;
-//     // for (auto s : sockets)
-//     // {
-//     //     s->write(bArray);
-//     // }
-// }
 
 void TcpSocketsServer::deleteSockets()
 {
-     socket = reinterpret_cast<QTcpSocket*>(sender());
-     sockets.erase(std::remove(sockets.begin(),sockets.end(),socket), sockets.end());
-     socket->deleteLater();
+    socket_interface = reinterpret_cast<MTcpSocket*>(sender());
+    newSockets_interface.erase(std::remove(newSockets_interface.begin(),newSockets_interface.end(),socket_interface), newSockets_interface.end());
+    //socket_interface->deleteLater();
 }
+
+
+
+
 
 
 

@@ -2,16 +2,18 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network
 
-CONFIG += c++20
+CONFIG += c++17
 
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    qrunnablethread.cpp
+    mtcpsocket.cpp
+
 
 HEADERS += \
     mainwindow.h \
-    qrunnablethread.h
+    mtcpsocket.h
+
 
 FORMS += \
     mainwindow.ui

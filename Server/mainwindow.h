@@ -1,29 +1,36 @@
 
 #ifndef TCPSOCKETSSERVER_H
 #define TCPSOCKETSSERVER_H
-#include<QThreadPool>
-#include <QTcpServer>
 #include <QTcpSocket>
+#include "mtcpsocket.h"
+#include<QThread>
+#include<QTcpServer>
 #include <QtCore/qdebug.h>
-#include "qrunnablethread.h"
+
 
 class TcpSocketsServer : public QTcpServer
 {
     Q_OBJECT
 public:
     TcpSocketsServer();
-    QTcpSocket* socket;
-    QThreadPool* threadPool;
-    QRunnableThread* qrunnable;
+
 private:
-    QVector<QTcpSocket*> sockets;
+    const int m_idealThreadCount = qMax(QThread::idealThreadCount()-1,1);
+
+    MTcpSocket* newSocket_interface;
+    MTcpSocket* socket_interface;
+    QByteArray bArray;
+
+    QVector<QThread*> m_availableThreads;
+    QVector<int> m_threadsLoad;
+    QVector<MTcpSocket*> newSockets_interface;
     QVector<qintptr> socketDescriptors;
-    // QByteArray bArray;
-    void sendToClient(QString message);
-public slots:
+
     void incomingConnection(qintptr socketDescriptor);
-    void slotReadyRead();
+
+public slots:
+    void sendToSockets(QString);
     void deleteSockets();
 };
 
-#endif // TCPSOCKETSSERVER_H
+#endif // TCPSOCKETSSERVER_H4
