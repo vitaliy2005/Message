@@ -12,15 +12,33 @@ MTcpSocket::MTcpSocket(qintptr socketDescriptor)
 void MTcpSocket::readyRead_slot()
 {
     socket = reinterpret_cast<QTcpSocket*>(sender());
-    QDataStream in(socket);
-    in.setVersion(QDataStream::Qt_6_2);
-    if(in.status() == QDataStream::Ok)
+    QDataStream out(socket);
+    out.setVersion(QDataStream::Qt_6_2);
+    if(out.status() == QDataStream::Ok)
     {
-        qDebug() << "read";
-        QString message;
-        in >> message;
-        qDebug() << message;
-        emit readyToSend_signal(message);
+        for (;;)
+        {
+            if (nextBlockSize == 0)
+            {
+                if (socket->bytesAvailable() < 2)
+                {
+                    break;
+                }
+                out >> nextBlockSize;
+            }
+
+            if (socket->bytesAvailable() < nextBlockSize)
+            {
+                break;
+            }
+            QString message;
+            out >> message;
+            nextBlockSize = 0;
+            qDebug() << "read";
+            qDebug() << message;
+            emit readyToSend_signal(message);
+            break;
+        }
     }
     else
     {
@@ -40,9 +58,13 @@ void MTcpSocket::socketClientDisconnected_slot()
 void MTcpSocket::writeInSoket(QString message)
 {
     bArray.clear();
-    QDataStream out(&bArray, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_2);
-    out << message;
+    QDataStream in(&bArray, QIODevice::WriteOnly);
+    in.setVersion(QDataStream::Qt_6_2);
+
+    in << qint16(0) << message;
+    in.device()->seek(0);
+    in << qint16(bArray.size() - sizeof(qint16));
+
     socket->write(bArray);
 }
 

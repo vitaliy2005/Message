@@ -1,4 +1,3 @@
-
 #ifndef TCPSOCKETSSERVER_H
 #define TCPSOCKETSSERVER_H
 #include <QTcpSocket>
@@ -21,6 +20,7 @@ private:
     MTcpSocket* socket_interface;
     QByteArray bArray;
 
+
     QVector<QThread*> m_availableThreads;
     QVector<int> m_threadsLoad;
     QVector<MTcpSocket*> newSockets_interface;
@@ -29,7 +29,7 @@ private:
     void incomingConnection(qintptr socketDescriptor);
 
 public slots:
-    void sendToSockets(QString);
+    void sendToSockets(QString message);
     void deleteSockets();
 };
 

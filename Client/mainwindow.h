@@ -20,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QTcpSocket* socket;
+    quint16 nextBlockSize = 0;
     QByteArray bArray;
 public slots:
     void slotReadyRead();

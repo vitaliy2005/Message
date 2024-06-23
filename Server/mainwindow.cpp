@@ -4,7 +4,7 @@
 
 TcpSocketsServer::TcpSocketsServer()
 {
-    if (this->listen(QHostAddress::Any, 8080))
+    if (this->listen(QHostAddress::LocalHost, 1801))
     {
         qDebug() << "ready";
     }
@@ -40,18 +40,12 @@ void TcpSocketsServer::incomingConnection(qintptr socketDescriptor)
 
     connect(newSocket_interface, &MTcpSocket::socketClientDisconnected_signal, this, [this, threadIdx]() {--m_threadsLoad[threadIdx];}, Qt::QueuedConnection);
     connect(newSocket_interface, &MTcpSocket::readyToSend_signal, this, &TcpSocketsServer::sendToSockets);
-
-    //addPendingConnection(newSocket_interface);
 }
 
 
 
 void TcpSocketsServer::sendToSockets(QString message)
 {
-    bArray.clear();
-    QDataStream out(&bArray, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_2);
-    out << message;
     for (auto socket : newSockets_interface)
     {
         socket->writeInSoket(message);

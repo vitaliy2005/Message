@@ -14,6 +14,7 @@ public:
 private:
     QTcpSocket* socket;
     QByteArray bArray;
+    quint16 nextBlockSize = 0;
 
     void sendToClient(QString);
 
@@ -22,7 +23,7 @@ private slots:
     void socketClientDisconnected_slot();
 
 signals:
-    void readyToSend_signal(QString);
+    void readyToSend_signal(QString message);
     void socketClientDisconnected_signal();
 };
 

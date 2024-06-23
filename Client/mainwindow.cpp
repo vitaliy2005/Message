@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     socket = new QTcpSocket(this);
-    socket->connectToHost("217.71.129.139", 4800);
+    socket->connectToHost(QHostAddress::LocalHost, 1801);
     connect(socket, &QTcpSocket::readyRead, this, &MainWindow::slotReadyRead);
     connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
 }
@@ -19,13 +19,31 @@ MainWindow::~MainWindow()
 void MainWindow::slotReadyRead()
 {
     socket = reinterpret_cast<QTcpSocket*>(sender());
-    QDataStream in(socket);
-    in.setVersion(QDataStream::Qt_6_4);
-    if(in.status() == QDataStream::Ok)
+    QDataStream out(socket);
+    out.setVersion(QDataStream::Qt_6_4);
+    if(out.status() == QDataStream::Ok)
     {
-        QString message;
-        in >> message;
-        ui->textBrowser->append(message);
+        for (;;)
+        {
+            if (nextBlockSize == 0)
+            {
+                if (socket->bytesAvailable() < 2)
+                {
+                    break;
+                }
+                out >> nextBlockSize;
+            }
+
+            if (socket->bytesAvailable() < nextBlockSize)
+            {
+                break;
+            }
+            QString message;
+            out >> message;
+            nextBlockSize = 0;
+            ui->textBrowser->append(message);
+            break;
+        }
     }
     else
     {
@@ -36,9 +54,13 @@ void MainWindow::slotReadyRead()
 void MainWindow::sendToServer(QString message)
 {
     bArray.clear();
-    QDataStream out(&bArray, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_6_4);
-    out << message;
+    QDataStream in(&bArray, QIODevice::WriteOnly);
+    in.setVersion(QDataStream::Qt_6_2);
+
+    in << qint16(0) << message;
+    in.device()->seek(0);
+    in << qint16(bArray.size() - sizeof(qint16));
+
     socket->write(bArray);
     socket->flush();
 }
