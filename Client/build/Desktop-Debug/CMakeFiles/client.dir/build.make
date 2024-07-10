@@ -76,10 +76,17 @@ client_autogen/timestamp: CMakeFiles/client.dir/compiler_depend.ts
 	/usr/bin/cmake -E cmake_autogen /home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles/client_autogen.dir/AutogenInfo.json Debug
 	/usr/bin/cmake -E touch /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/timestamp
 
+client_autogen/EWIEGA46WW/qrc_image.cpp: /home/warg/Work/qt/Message/Client/image.qrc
+client_autogen/EWIEGA46WW/qrc_image.cpp: CMakeFiles/client_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json
+client_autogen/EWIEGA46WW/qrc_image.cpp: /home/warg/Work/qt/Message/Client/my.jpg
+client_autogen/EWIEGA46WW/qrc_image.cpp: /usr/lib/qt6/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for image.qrc"
+	/usr/bin/cmake -E cmake_autorcc /home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles/client_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+
 CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: client_autogen/mocs_compilation.cpp
 CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o -MF CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o -c /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/mocs_compilation.cpp
 
 CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.i: cmake_force
@@ -93,7 +100,7 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.s: cmake_force
 CMakeFiles/client.dir/main.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/main.cpp.o: /home/warg/Work/qt/Message/Client/main.cpp
 CMakeFiles/client.dir/main.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/main.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/main.cpp.o -MF CMakeFiles/client.dir/main.cpp.o.d -o CMakeFiles/client.dir/main.cpp.o -c /home/warg/Work/qt/Message/Client/main.cpp
 
 CMakeFiles/client.dir/main.cpp.i: cmake_force
@@ -107,7 +114,7 @@ CMakeFiles/client.dir/main.cpp.s: cmake_force
 CMakeFiles/client.dir/mainwindow.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/mainwindow.cpp.o: /home/warg/Work/qt/Message/Client/mainwindow.cpp
 CMakeFiles/client.dir/mainwindow.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/mainwindow.cpp.o"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/mainwindow.cpp.o -MF CMakeFiles/client.dir/mainwindow.cpp.o.d -o CMakeFiles/client.dir/mainwindow.cpp.o -c /home/warg/Work/qt/Message/Client/mainwindow.cpp
 
 CMakeFiles/client.dir/mainwindow.cpp.i: cmake_force
@@ -118,11 +125,71 @@ CMakeFiles/client.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/mainwindow.cpp.s"
 	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/warg/Work/qt/Message/Client/mainwindow.cpp -o CMakeFiles/client.dir/mainwindow.cpp.s
 
+CMakeFiles/client.dir/authentication.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/authentication.cpp.o: /home/warg/Work/qt/Message/Client/authentication.cpp
+CMakeFiles/client.dir/authentication.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/authentication.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/authentication.cpp.o -MF CMakeFiles/client.dir/authentication.cpp.o.d -o CMakeFiles/client.dir/authentication.cpp.o -c /home/warg/Work/qt/Message/Client/authentication.cpp
+
+CMakeFiles/client.dir/authentication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/authentication.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/warg/Work/qt/Message/Client/authentication.cpp > CMakeFiles/client.dir/authentication.cpp.i
+
+CMakeFiles/client.dir/authentication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/authentication.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/warg/Work/qt/Message/Client/authentication.cpp -o CMakeFiles/client.dir/authentication.cpp.s
+
+CMakeFiles/client.dir/chats.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/chats.cpp.o: /home/warg/Work/qt/Message/Client/chats.cpp
+CMakeFiles/client.dir/chats.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/client.dir/chats.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/chats.cpp.o -MF CMakeFiles/client.dir/chats.cpp.o.d -o CMakeFiles/client.dir/chats.cpp.o -c /home/warg/Work/qt/Message/Client/chats.cpp
+
+CMakeFiles/client.dir/chats.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/chats.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/warg/Work/qt/Message/Client/chats.cpp > CMakeFiles/client.dir/chats.cpp.i
+
+CMakeFiles/client.dir/chats.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/chats.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/warg/Work/qt/Message/Client/chats.cpp -o CMakeFiles/client.dir/chats.cpp.s
+
+CMakeFiles/client.dir/connection.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/connection.cpp.o: /home/warg/Work/qt/Message/Client/connection.cpp
+CMakeFiles/client.dir/connection.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/client.dir/connection.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/connection.cpp.o -MF CMakeFiles/client.dir/connection.cpp.o.d -o CMakeFiles/client.dir/connection.cpp.o -c /home/warg/Work/qt/Message/Client/connection.cpp
+
+CMakeFiles/client.dir/connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/connection.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/warg/Work/qt/Message/Client/connection.cpp > CMakeFiles/client.dir/connection.cpp.i
+
+CMakeFiles/client.dir/connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/connection.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/warg/Work/qt/Message/Client/connection.cpp -o CMakeFiles/client.dir/connection.cpp.s
+
+CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o: client_autogen/EWIEGA46WW/qrc_image.cpp
+CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o -MF CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o.d -o CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o -c /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/qrc_image.cpp
+
+CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/qrc_image.cpp > CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.i
+
+CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/qrc_image.cpp -o CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.s
+
 # Object files for target client
 client_OBJECTS = \
 "CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/client.dir/main.cpp.o" \
-"CMakeFiles/client.dir/mainwindow.cpp.o"
+"CMakeFiles/client.dir/mainwindow.cpp.o" \
+"CMakeFiles/client.dir/authentication.cpp.o" \
+"CMakeFiles/client.dir/chats.cpp.o" \
+"CMakeFiles/client.dir/connection.cpp.o" \
+"CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
@@ -130,15 +197,20 @@ client_EXTERNAL_OBJECTS =
 client: CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o
 client: CMakeFiles/client.dir/main.cpp.o
 client: CMakeFiles/client.dir/mainwindow.cpp.o
+client: CMakeFiles/client.dir/authentication.cpp.o
+client: CMakeFiles/client.dir/chats.cpp.o
+client: CMakeFiles/client.dir/connection.cpp.o
+client: CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 client: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
+client: /usr/lib/x86_64-linux-gnu/libQt6Sql.so.6.4.2
 client: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
 client: /usr/lib/x86_64-linux-gnu/libGLX.so
 client: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 client: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -149,6 +221,7 @@ CMakeFiles/client.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/client.dir/clean
 
+CMakeFiles/client.dir/depend: client_autogen/EWIEGA46WW/qrc_image.cpp
 CMakeFiles/client.dir/depend: client_autogen/timestamp
 	cd /home/warg/Work/qt/Message/Client/build/Desktop-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/warg/Work/qt/Message/Client /home/warg/Work/qt/Message/Client /home/warg/Work/qt/Message/Client/build/Desktop-Debug /home/warg/Work/qt/Message/Client/build/Desktop-Debug /home/warg/Work/qt/Message/Client/build/Desktop-Debug/CMakeFiles/client.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/client.dir/depend

@@ -9,7 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "client_autogen/timestamp" "custom" "client_autogen/deps"
+  "/home/warg/Work/qt/Message/Client/authentication.cpp" "CMakeFiles/client.dir/authentication.cpp.o" "gcc" "CMakeFiles/client.dir/authentication.cpp.o.d"
+  "/home/warg/Work/qt/Message/Client/chats.cpp" "CMakeFiles/client.dir/chats.cpp.o" "gcc" "CMakeFiles/client.dir/chats.cpp.o.d"
+  "/home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/qrc_image.cpp" "CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o" "gcc" "CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_image.cpp.o.d"
   "/home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/mocs_compilation.cpp" "CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o.d"
+  "/home/warg/Work/qt/Message/Client/connection.cpp" "CMakeFiles/client.dir/connection.cpp.o" "gcc" "CMakeFiles/client.dir/connection.cpp.o.d"
   "/home/warg/Work/qt/Message/Client/main.cpp" "CMakeFiles/client.dir/main.cpp.o" "gcc" "CMakeFiles/client.dir/main.cpp.o.d"
   "/home/warg/Work/qt/Message/Client/mainwindow.cpp" "CMakeFiles/client.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/client.dir/mainwindow.cpp.o.d"
   )

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client_autogen"
+  "client_autogen/include/ui_authentication.h"
+  "client_autogen/include/ui_chats.h"
   "client_autogen/include/ui_mainwindow.h"
   "client_autogen/mocs_compilation.cpp"
   "client_autogen/timestamp"

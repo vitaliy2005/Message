@@ -1,6 +1,6 @@
 CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
   /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/mocs_compilation.cpp \
-  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/moc_authentication.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/memory \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/memoryfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -232,9 +232,9 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ranges_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_memory_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/execution_defs.h \
-  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/../../../../mainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/../../../../authentication.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -296,7 +296,6 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
@@ -441,6 +440,13 @@ CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/moc_chats.cpp \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/../../../../chats.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+  /home/warg/Work/qt/Message/Client/build/Desktop-Debug/client_autogen/EWIEGA46WW/../../../../mainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QTcpSocket \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpsocket.h \

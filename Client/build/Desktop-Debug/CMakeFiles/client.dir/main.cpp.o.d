@@ -450,6 +450,20 @@ CMakeFiles/client.dir/main.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostaddress.h \
+  /home/warg/Work/qt/Message/Client/connection.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+  /home/warg/Work/qt/Message/Client/chats.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
